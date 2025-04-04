@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Tajawal', sans-serif;
+  }
+  
+  body {
+    direction: rtl;
+    text-align: right;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-primary-600 text-white rounded-lg font-bold transition-all hover:bg-primary-700 focus:ring-2 focus:ring-primary-300 focus:outline-none;
+  }
+  
+  .card {
+    @apply p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-primary-900;
+  }
+  
+  .quote-card {
+    @apply p-6 bg-gradient-to-tr from-primary-50 to-primary-100 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border-r-4 border-primary-500;
+  }
+}
+
+.zapt-badge {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.zapt-badge:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
